@@ -12,6 +12,11 @@
 </head>
 <body>
   <div class="text-center">
+    Backpack: <%= @backpack.total %>
+
+    <% flash.each do |type, message| %>
+      <%= content_tag :div, message %>
+    <% end %>
     <%= image_tag('banner.png', class: 'banner') %>
   </div>
 <%= yield %>
